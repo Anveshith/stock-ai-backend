@@ -1,7 +1,7 @@
 require("dotenv").config();   // ✅ MUST BE FIRST
 
 const cron = require("node-cron");
-const { runDailyJob } = require("./cron/dailyJob");
+const { runDailyJob } = require("../srp/cron/dailyJob");
 
 const express = require("express");
 const cors = require("cors");
