@@ -1,14 +1,12 @@
-require("dotenv").config();   // ✅ MUST BE FIRST
+require("dotenv").config();
 
 const cron = require("node-cron");
-const { runDailyJob } = require("../src/cron/dailyJob");
+const { runDailyJob } = require("./cron/dailyJob");
 
 const express = require("express");
 const cors = require("cors");
 
 const scoresRoute = require("./routes/scores");
-
-const app = express();
 
 app.use(cors());
 app.use(express.json());
